@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".MusicPlayerActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Judul Lagu"
+        android:id="@+id/song_title"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:padding="20dp"/>
+
+    <ImageView
+        android:id="@+id/musicIcon"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_above="@id/controls"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_music"
+        android:padding="20dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/controls"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentTime"
+            android:text="00:00"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/white"
+            android:layout_below="@id/seekBar"
+            android:layout_margin="20dp"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/finishTime"
+            android:text="05:00"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_below="@id/seekBar"
+            android:layout_margin="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/finishTime"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_skip_previous_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/previous"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_skip_next_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/next"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_pause_circle_outline_24"
+                android:layout_centerInParent="true"
+                android:id="@+id/pause_play"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
